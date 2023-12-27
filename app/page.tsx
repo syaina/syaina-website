@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import cx from "classnames";
+import { portfolios } from "./consts/portfolios";
 
 export default function Home() {
   return (
@@ -162,33 +163,63 @@ export default function Home() {
         id="portfolio"
         className={`${styles.sectionContainer} ${styles.portfolio}`}
       >
-        <h2 className="heading-2 color-tertiary-secondary">PORTFOLIO</h2>
-        <div className={`${styles.portfolioBtnWrapper}`}>
-          <button
-            className={`${cx(
-              styles.portfolioBtn,
-              styles.active
-            )} text-secondary color-secondary`}
-          >
-            All
-          </button>
-          <button
-            className={`${cx(
-              styles.portfolioBtn
-              // styles.active
-            )} text-secondary color-secondary`}
-          >
-            Development
-          </button>
-          <button
-            className={`${cx(
-              styles.portfolioBtn
-              // styles.active
-            )} text-secondary color-secondary`}
-          >
-            Design
-          </button>
+        {/* Portfolio Heading */}
+        <div className={styles.portfolioHeading}>
+          <h2 className="heading-2 color-tertiary-secondary">PORTFOLIO</h2>
+          {/* <div className={`${styles.portfolioBtnWrapper}`}>
+            <button
+              className={`${cx(
+                styles.portfolioBtn,
+                styles.active
+              )} text-secondary color-secondary`}
+            >
+              All
+            </button>
+            <button
+              className={`${cx(
+                styles.portfolioBtn
+                // styles.active
+              )} text-secondary color-secondary`}
+            >
+              Development
+            </button>
+            <button
+              className={`${cx(
+                styles.portfolioBtn
+                // styles.active
+              )} text-secondary color-secondary`}
+            >
+              Design
+            </button>
+          </div> */}
         </div>
+
+        {/* Portfolio Container */}
+        {portfolios.map((portfolio) => {
+          return (
+            <div className={styles.portfolioContainer} key={portfolio.id}>
+              <div className={styles.borderContainer}>
+                <div className={styles.portfolioImgContainer}>
+                  <Image
+                    src={portfolio.image}
+                    alt={portfolio.title}
+                    width={400}
+                    height={300}
+                  />
+                </div>
+              </div>
+
+              <div className={styles.porfolioContent}>
+                <h2 className="heading-2 color-secondary">{portfolio.title}</h2>
+                <p
+                  className={`text-secondary color-secondary ${styles.portfolioContent__text}`}
+                >
+                  {portfolio.description}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </>
   );
