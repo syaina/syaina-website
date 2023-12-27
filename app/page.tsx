@@ -48,109 +48,103 @@ export default function Home() {
               className={styles.skillItem}
               width={40}
               height={40}
-              src={
-                "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-              }
+              src={"/images/techstack/javascript-logo.svg"}
               alt="Javascript"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src={
-                "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-              }
+              src={"/images/techstack/typescript-logo.svg"}
               alt="Typescript"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src={
-                "https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-1024.png"
-              }
+              src={"/images/techstack/python-logo.png"}
               alt="Python"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="https://laravel.com/img/logomark.min.svg"
+              src="/images/techstack/laravel-logo.svg"
               alt="Laravel"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              src="/images/techstack/html-logo.svg"
               alt="HTML5"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              src="/images/techstack/css-logo.svg"
               alt="CSS3"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+              src="/images/techstack/sass-logo.svg"
               alt="Sass"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+              src="/images/techstack/nextjs-logo.svg"
               alt="NextJS"
             />
             <Image
               width={40}
               height={40}
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+              src="/images/techstack/reactjs-logo.svg"
               alt="ReactJS"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="/images/social-media/react-query-logo.png"
+              src="/images/techstack/react-query-logo.png"
               alt="React Query"
             />
             <Image
               width={40}
               height={40}
-              src="/images/social-media/sonarqube-logo.png"
+              src="/images/techstack/sonarqube-logo.png"
               alt="SonarQube"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="/images/social-media/ant-design-logo.svg"
+              src="/images/techstack/ant-design-logo.svg"
               alt="Ant Design"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="/images/social-media/sentry-logo.png"
+              src="/images/techstack/sentry-logo.png"
               alt="Sentry"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="/images/social-media/jest-logo.png"
+              src="/images/techstack/jest-logo.png"
               alt="Jest"
             />
             <Image
               className={styles.skillItem}
               width={40}
               height={40}
-              src="/images/social-media/rtl-logo.png"
+              src="/images/techstack/rtl-logo.png"
               alt="React Testing Library"
             />
           </div>
