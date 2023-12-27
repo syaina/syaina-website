@@ -4,6 +4,7 @@ import cx from "classnames";
 import { portfolios } from "./_consts/portfolios";
 import Link from "next/link";
 import { contacts } from "./_consts/contacts";
+import { skills } from "./_consts/skills";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
           />
         </div>
       </main>
+
       {/* About Me Section */}
       <div
         id="about-me"
@@ -52,112 +54,20 @@ export default function Home() {
 
           <h3 className={styles.h3}>AQUIRED SKILL</h3>
           <div className={styles.skillContainer}>
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src={"/images/techstack/javascript-logo.svg"}
-              alt="Javascript"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src={"/images/techstack/typescript-logo.svg"}
-              alt="Typescript"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src={"/images/techstack/python-logo.png"}
-              alt="Python"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/laravel-logo.svg"
-              alt="Laravel"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/html-logo.svg"
-              alt="HTML5"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/css-logo.svg"
-              alt="CSS3"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/sass-logo.svg"
-              alt="Sass"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/nextjs-logo.svg"
-              alt="NextJS"
-            />
-            <Image
-              width={40}
-              height={40}
-              src="/images/techstack/reactjs-logo.svg"
-              alt="ReactJS"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/react-query-logo.png"
-              alt="React Query"
-            />
-            <Image
-              width={40}
-              height={40}
-              src="/images/techstack/sonarqube-logo.png"
-              alt="SonarQube"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/ant-design-logo.svg"
-              alt="Ant Design"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/sentry-logo.png"
-              alt="Sentry"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/jest-logo.png"
-              alt="Jest"
-            />
-            <Image
-              className={styles.skillItem}
-              width={40}
-              height={40}
-              src="/images/techstack/rtl-logo.png"
-              alt="React Testing Library"
-            />
+            {skills.map((skill) => (
+              <Image
+                key={skill.id}
+                className={styles.skillItem}
+                width={40}
+                height={40}
+                src={skill.icon}
+                alt={skill.title}
+              />
+            ))}
           </div>
         </div>
       </div>
+
       {/* Experience Section */}
       <div
         id="experience"
