@@ -29,6 +29,10 @@ export default function RootLayout({
         </header>
 
         <section>{children}</section>
+
+        <footer className="text-secondary color-tertiary">
+          Made by Syaina in 2023 with happiness☺
+        </footer>
       </body>
     </html>
   );
