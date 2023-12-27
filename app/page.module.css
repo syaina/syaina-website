@@ -1,3 +1,8 @@
+.maxWidth {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .sectionContainer {
   display: flex;
   justify-content: space-between;
@@ -139,4 +144,44 @@
 .portfolioContent__text {
   margin-top: 2rem;
   max-width: 578px;
+}
+
+#contact {
+  width: 100%;
+  background-color: var(--bg-tertiary);
+  margin: 2rem 0;
+  margin-top: 4rem;
+}
+
+.contactContainer {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  max-width: 756px;
+  margin: auto;
+}
+
+.socialMediaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.socialMedia__Item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 25px;
+}
+
+.socialMedia__Item__IconContainer {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.socialMedia__Item a {
+  display: block;
 }

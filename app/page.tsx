@@ -1,13 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import cx from "classnames";
-import { portfolios } from "./consts/portfolios";
+import { portfolios } from "./_consts/portfolios";
+import Link from "next/link";
+import { contacts } from "./_consts/contacts";
 
 export default function Home() {
   return (
     <>
-      <main className={styles.main}>
-        <h1 className="heading-1 color-primary">
+      {/* Main Section */}
+      <main className={`${styles.maxWidth} ${styles.main}`}>
+        <h1 className="heading-1 color-secondary">
           Hi! I am Syaina, <br />3 years experienced Front End Developer.
         </h1>
         <div className="main-img-container" style={{ position: "relative" }}>
@@ -20,8 +23,11 @@ export default function Home() {
           />
         </div>
       </main>
-
-      <div id="about-me" className={styles.aboutMeSection}>
+      {/* About Me Section */}
+      <div
+        id="about-me"
+        className={`${styles.maxWidth} ${styles.aboutMeSection}`}
+      >
         <div style={{ position: "relative" }}>
           <Image
             src={"/images/main/main-2.png"}
@@ -31,7 +37,8 @@ export default function Home() {
             quality={100}
           />
         </div>
-        <div className={styles.aboutMeContent}>
+
+        <div className={`${styles.maxWidth} ${styles.aboutMeContent}`}>
           <h2 className="heading-2 color-tertiary-secondary">Who I am</h2>
           <p className="text-secondary color-secondary">
             With over 2+ years of experience as a full-time Front End Developer,
@@ -151,14 +158,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      {/* Experience Section */}
       <div
         id="experience"
         className={`${styles.sectionContainer} ${styles.experienceContainer}`}
       >
         {/* ... */}
       </div>
-
+      {/* Portfolio Section */}
       <div
         id="portfolio"
         className={`${styles.sectionContainer} ${styles.portfolio}`}
@@ -221,6 +228,39 @@ export default function Home() {
             </div>
           );
         })}
+      </div>
+
+      {/* Contact Section */}
+      <div id={styles.contact}>
+        <div className={styles.contactContainer}>
+          <h2 className="text-primary color-tertiary-secondary">Contact</h2>
+          <p className="text-secondary color-secondary">
+            Any bussiness inquires or just chit chat for shares are very
+            welcome. Please wait until very max in two days office for my
+            response. Thank you for your caring :)
+          </p>
+
+          <div className={styles.socialMediaContainer}>
+            {contacts.map((contact) => (
+              <div className={styles.socialMedia__Item} key={contact.id}>
+                <div className={styles.socialMedia__Item__IconContainer}>
+                  <Image
+                    src={contact.icon}
+                    alt={contact.title}
+                    width={20}
+                    height={20}
+                  />
+                </div>
+                <Link
+                  href={contact.link}
+                  className="text-secondary color-secondary"
+                >
+                  {contact.value}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
