@@ -213,9 +213,10 @@ export default function Home() {
                 <h2 className="heading-2 color-secondary">{portfolio.title}</h2>
                 <p
                   className={`text-secondary color-secondary ${styles.portfolioContent__text}`}
-                >
-                  {portfolio.description}
-                </p>
+                  dangerouslySetInnerHTML={{
+                    __html: portfolio.description,
+                  }}
+                ></p>
               </div>
             </div>
           );
