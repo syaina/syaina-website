@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import cx from "classnames";
 import { portfolios } from "./_consts/portfolios";
 import Link from "next/link";
 import { contacts } from "./_consts/contacts";
@@ -11,7 +10,7 @@ export default function Home() {
   return (
     <>
       {/* Main Section */}
-      <main className={`${styles.maxWidth} ${styles.main}`}>
+      <main className={`${styles.maxWidth} ${styles.main}`} id="home">
         <h1 className="heading-1 color-secondary">
           Hi! I am Syaina, <br />3 years experienced Front End Developer.
         </h1>
@@ -116,32 +115,6 @@ export default function Home() {
         {/* Portfolio Heading */}
         <div className={styles.portfolioHeading}>
           <h2 className="heading-2 color-tertiary-secondary">PORTFOLIO</h2>
-          {/* <div className={`${styles.portfolioBtnWrapper}`}>
-            <button
-              className={`${cx(
-                styles.portfolioBtn,
-                styles.active
-              )} text-secondary color-secondary`}
-            >
-              All
-            </button>
-            <button
-              className={`${cx(
-                styles.portfolioBtn
-                // styles.active
-              )} text-secondary color-secondary`}
-            >
-              Development
-            </button>
-            <button
-              className={`${cx(
-                styles.portfolioBtn
-                // styles.active
-              )} text-secondary color-secondary`}
-            >
-              Design
-            </button>
-          </div> */}
         </div>
 
         {/* Portfolio Container */}
@@ -174,13 +147,13 @@ export default function Home() {
       </div>
 
       {/* Contact Section */}
-      <div id={styles.contact}>
+      <div id="contact" className={styles.contact}>
         <div className={styles.contactContainer}>
           <h2 className="text-primary color-tertiary-secondary">Contact</h2>
           <p className="text-secondary color-secondary">
             Any bussiness inquires or just chit chat for shares are very
             welcome. Please wait until very max in two days office for my
-            response. Thank you for your caring :)
+            response. Thank you for your caring :&rpar;
           </p>
 
           <div className={styles.socialMediaContainer}>
