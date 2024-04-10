@@ -6,8 +6,11 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Syaina`s Website",
-  description: "Hello I am Syaina!",
+  title: "Syaina's Website",
+  description: "Hello I am Syaina! Front End Developer",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
