@@ -56,15 +56,67 @@
 }
 
 .experienceContainer {
-  padding: 1rem 0;
+  padding-top: 1rem;
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4.5rem;
+  overflow: hidden;
+  align-items: center;
+}
+
+.periodContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.periodContent {
+  /* border-right: 1px solid var(--color-tertiary); */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 8px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.periodContent__time {
+  text-align: right;
+}
+
+.periodContent__work {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  position: relative;
+}
+
+.periodContent__work::before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 300px;
+  width: 1px;
+  background: var(--color-tertiary);
+  left: calc(-2rem - 4px);
+  z-index: 1;
+}
+
+.periodBullet {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-tertiary-secondary);
+  z-index: 2;
 }
 
 .portfolio {
   grid: 2rem 0;
-  margin-top: 80px;
+  margin-top: 8rem;
   text-align: center;
   flex-direction: column;
-  gap: 4.25rem;
+  gap: 1rem;
 }
 
 .portfolioBtnWrapper {
@@ -87,6 +139,10 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.portfolioHeading h2 {
+  margin-bottom: 4.25rem;
 }
 
 .portfolioContainer {

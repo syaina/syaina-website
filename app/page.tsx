@@ -5,6 +5,7 @@ import { portfolios } from "./_consts/portfolios";
 import Link from "next/link";
 import { contacts } from "./_consts/contacts";
 import { skills } from "./_consts/skills";
+import { works } from "./_consts/works";
 
 export default function Home() {
   return (
@@ -71,10 +72,42 @@ export default function Home() {
       {/* Experience Section */}
       <div
         id="experience"
-        className={`${styles.sectionContainer} ${styles.experienceContainer}`}
+        className={`${styles.maxWidth} ${styles.experienceContainer}`}
       >
-        {/* ... */}
+        <h2 className="heading-2 color-tertiary-secondary">
+          WORK <br /> EXPERIENCE
+        </h2>
+
+        <div className={styles.periodContentContainer}>
+          {works.map((work) => (
+            <div className={styles.periodContent} key={work.id}>
+              <div className={styles.periodContent__time}>
+                <h2 className="heading-2 color-secondary">{work.period}</h2>
+                <p className="text-secondary color-tertiary">{work.date}</p>
+              </div>
+              <div className={styles.periodBullet}></div>
+              <div className={styles.periodContent__work}>
+                <h3
+                  className={`heading-3 color-secondary ${styles.periodContent__work__title}`}
+                >
+                  {work.title}
+                </h3>
+                <p
+                  className={`text-secondary color-tertiary ${styles.periodContent__work__subtitle}`}
+                >
+                  at {work.company}
+                </p>
+                <p
+                  className={`text-secondary color-secondary ${styles.periodContent__work__description}`}
+                >
+                  {work.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
+
       {/* Portfolio Section */}
       <div
         id="portfolio"
