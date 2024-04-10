@@ -202,7 +202,7 @@
   max-width: 578px;
 }
 
-#contact {
+.contact {
   width: 100%;
   background-color: var(--bg-tertiary);
   margin: 2rem 0;
