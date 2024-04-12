@@ -34,7 +34,7 @@ export const Navbar = () => {
         >
           Portfolio
         </button>
-        <button
+        {/* <button
           className="text-secondary"
           onClick={scrollTo.bind(null, {
             id: "blog",
@@ -42,7 +42,7 @@ export const Navbar = () => {
           })}
         >
           Blog
-        </button>
+        </button> */}
         <button
           className="text-secondary"
           onClick={scrollTo.bind(null, {
