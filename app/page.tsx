@@ -153,7 +153,7 @@ export default function Home() {
           <p className="text-secondary color-secondary">
             Any bussiness inquires or just chit chat for shares are very
             welcome. Please wait until very max in two days office for my
-            response. Thank you for your caring :&rpar;
+            response. Thank you for your caring :)
           </p>
 
           <div className={styles.socialMediaContainer}>
